@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Movies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<style>
+    ul {
+        text-align: center;
+        list-style: none;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    section {
+        background-color: rgb(255, 255, 255);
+        color: rgb(2, 2, 2);
+        width: 50%;
+        margin-left: 25%;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="container">
+            <h2 class="center">
+                Movies
+            </h2>
+
+            <ul class="collection">
+
+                <% movies.forEach( (movie) => { %>
+                    <li class="collection-items">
+                        <h4>
+                            MovieTitle:
+                            <%= movie.movietitle%>
+                        </h4>
+                        <h5>
+                            MovieDirector:
+                            <%= movie.moviedirector%>
+                        </h5>
+                    </li>
+
+                    <% }); %>
+            </ul>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+<!-- Compiled and minified JavaScript -->
+
+</html>
